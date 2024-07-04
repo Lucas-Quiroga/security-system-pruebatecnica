@@ -23,11 +23,11 @@ Para iniciar el servidor de desarrollo, ejecuta: npm run dev
 
 Esto iniciará la aplicación en http://localhost:3000.
 
-Scripts
-npm run dev: Inicia el servidor de desarrollo.
-npm run build: Construye la aplicación para producción.
-npm start: Inicia el servidor de producción.
-npm test: Ejecuta la suite de pruebas.
+## Scripts
+- npm run dev: Inicia el servidor de desarrollo.
+- npm run build: Construye la aplicación para producción.
+- npm start: Inicia el servidor de producción.
+- npm test: Ejecuta la suite de pruebas.
 
 ## Pruebas
 
