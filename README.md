@@ -39,11 +39,15 @@ Este proyecto utiliza Jest y Testing Library para las pruebas. Para ejecutar las
 
 La estructura del proyecto sigue una configuración típica de Next.js con algunos directorios personalizados:
 
+.
+├── public
+│ └── profile.jpg
 ├── src
 │ ├── **tests**
 │ │ ├── About.test.tsx
 │ │ ├── ContactForm.test.tsx
 │ │ ├── Header.test.tsx
+│ │ ├── Home.test.tsx
 │ │ └── Interests.test.tsx
 │ ├── app
 │ │ ├── globals.css
