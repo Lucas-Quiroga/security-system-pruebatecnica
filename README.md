@@ -8,15 +8,14 @@ Este es un proyecto de prueba técnica de "Security and System". Se trata de una
 - [Uso](#Uso)
 - [Scripts](#Scripts)
 - [Pruebas](#Pruebas)
-- [Estructura del proyecto](#Estructura-del-proyecto)
 - [Tecnologías utilizadas](#Tecnologías-utilizadas)
 - [Características](#Características)
 
 ## Instalación
 
-1. Clonar el repositorio: git clone https://github.com/yourusername/user-profile-web-page.git
-
-2. Instalar las dependencias: npm install
+1. Clonar el repositorio: git clone https://github.com/Lucas-Quiroga/security-system-pruebatecnica.git
+2. cd security-system-pruebatecnica
+3. Instalar las dependencias: npm install
 
 ## Uso
 
@@ -28,49 +27,11 @@ Scripts
 npm run dev: Inicia el servidor de desarrollo.
 npm run build: Construye la aplicación para producción.
 npm start: Inicia el servidor de producción.
-npm run lint: Ejecuta el linter para verificar problemas de código.
 npm test: Ejecuta la suite de pruebas.
 
 ## Pruebas
 
 Este proyecto utiliza Jest y Testing Library para las pruebas. Para ejecutar las pruebas, usa: npm test
-
-## Estructura del proyecto
-
-La estructura del proyecto sigue una configuración típica de Next.js con algunos directorios personalizados:
-
-.
-├── public
-│ └── profile.jpg
-├── src
-│ ├── **tests**
-│ │ ├── About.test.tsx
-│ │ ├── ContactForm.test.tsx
-│ │ ├── Header.test.tsx
-│ │ ├── Home.test.tsx
-│ │ └── Interests.test.tsx
-│ ├── app
-│ │ ├── globals.css
-│ │ ├── layout.tsx
-│ │ ├── page.module.css
-│ │ └── page.tsx
-│ ├── components
-│ │ ├── About.tsx
-│ │ ├── ContactForm.tsx
-│ │ ├── Header.tsx
-│ │ └── Interests.tsx
-│ └── styles
-│ ├── about.module.css
-│ ├── contactForm.module.css
-│ ├── header.module.css
-│ └── interests.module.css
-├── .eslintrc.json
-├── jest.config.js
-├── next.config.js
-├── package.json
-├── README.md
-├── tsconfig.json
-└── tsconfig.node.json
 
 ## Tecnologías utilizadas
 
@@ -84,7 +45,7 @@ La estructura del proyecto sigue una configuración típica de Next.js con algun
 
 ## Características
 
-- Diseño responsivo: La página es responsiva y se ve bien en dispositivos de escritorio, tabletas y móviles.
+- Diseño responsivo: La página es responsiva y se ve bien en dispositivos de escritorio, tablets y móviles.
 - Animaciones CSS: Animaciones suaves para mejorar la experiencia del usuario.
 - Validación de formularios: Validación básica para el formulario de contacto.
 - Pruebas unitarias: Pruebas básicas para componentes utilizando Jest y Testing Library.

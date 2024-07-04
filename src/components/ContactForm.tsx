@@ -8,6 +8,18 @@ interface FormData {
   message: string;
 }
 
+interface Errors {
+  name?: string;
+  email?: string;
+  message?: string;
+}
+
+const ERRORS_MESSAGES: Errors = {
+  name: "Por favor, ingresa tu nombre.",
+  email: "Por favor, ingresa tu email.",
+  message: "Por favor, ingresa tu mensaje.",
+};
+
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -15,6 +27,7 @@ const ContactForm: React.FC = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -25,8 +38,18 @@ const ContactForm: React.FC = () => {
 
   const handleSubtmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    let newErrors = {};
 
-    if (formData.name && formData.email && formData.message) {
+    if (!formData.name)
+      newErrors = { ...newErrors, name: ERRORS_MESSAGES.name };
+    if (!formData.email)
+      newErrors = { ...newErrors, email: ERRORS_MESSAGES.email };
+    if (!formData.message)
+      newErrors = { ...newErrors, message: ERRORS_MESSAGES.message };
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
       setSubmitted(true);
     }
   };
@@ -53,6 +76,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               autoFocus
             />
+            {errors.name && <p className={styles.error}>{errors.name}</p>}
             <label htmlFor="email" className={styles["contact__form-label"]}>
               Email
             </label>
@@ -64,6 +88,7 @@ const ContactForm: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
             />
+            {errors.email && <p className={styles.error}>{errors.email}</p>}
             <label htmlFor="message" className={styles["contact__form-label"]}>
               Mensaje
             </label>
@@ -74,6 +99,7 @@ const ContactForm: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
             />
+            {errors.message && <p className={styles.error}>{errors.message}</p>}
             <button type="submit" className={styles["contact__form-button"]}>
               Enviar
             </button>
